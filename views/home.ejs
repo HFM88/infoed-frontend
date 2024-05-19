@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='./dist/tw_output.css'>
+    <link rel="stylesheet" href="./dist/packages/toastr/main.css">
+</head>
+
+<body class="bg-background font-paragraphs">
+    <%-include ('components/navbar.ejs')%>
+        <div class="flex justify-center w-full mt-20 text-text font-headings font-light text-md">
+            <div class="flex flex-col basis-full md:basis-2/3 lg:basis-1/2">
+                <div class="flex justify-between">
+                    <div class="basis-1/2 flex flex-col space-y-5 justify-center">
+                        <span class="text-center">For you</span>
+                        <div class="w-full h-[0.5px] bg-text mt-4"></div>
+                    </div>
+                    <div class="basis-1/2 flex flex-col space-y-5 justify-center">
+                        <span class="text-center">Friends</span>
+                        <div class="w-full h-[0.5px] bg-text bg-opacity-40 mt-4"></div>
+                    </div>
+                </div>
+                <!-- This acts as the border -->
+            </div>
+        </div>
+
+        <div class="flex justify-center w-full mt-10 text-text ">
+            <div class="flex flex-col basis-full md:basis-2/3 lg:basis-1/2 justify-center space-y-10 px-10">
+                <div class="flex flex-col space-y-2 bg-gray p-2 px-4 rounded-md">
+                    <div class="flex space-x-4 items-center justify-between">
+                        <a class="py-2 px-6 flex justify-center items-center" href="/profile" id="user-profile">
+                            <div class="w-12 h-12 overflow-hidden rounded-full">
+                                <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg" alt=""
+                                    class="object-cover w-full h-full" id="user-profile-pic">
+                            </div>
+                        </a>
+
+                        <div class="relative w-full">
+                            <input id="message-input" type="text"
+                                class="w-full py-4 outline-none px-4 pr-12 rounded-md bg-gray-200 text-text placeholder-text placeholder-opacity-40 bg-gray"
+                                placeholder="What are you up to?">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="send-button" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-text text-opacity-40 hover:text-opacity-100 duration-300 transition-all">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center w-full mt-10 mb-24 text-text">
+            <div class="flex flex-col basis-full md:basis-2/3 lg:basis-1/2 justify-center space-y-10 px-10"
+                id="posts-container">
+
+            </div>
+        </div>
+
+        <script src="../dist/packages/jquery.js"></script>
+        <script src="../dist/packages/toastr/main.js"></script>
+        <script src="../dist/components/home/renderposts.js"></script>
+        <script src="../dist/components/home/updatefeed.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href='./dist/tw_output.css'>
+  <link rel="stylesheet" href='./dist/packages/toastr/main.css'>
+</head>
+
+<body class="font-paragraphs text-text">
+  <div class="absolute top-5 left-5">
+    <a href="/home" class="">
+      <%-include('./components/logo.ejs') %>
+    </a>
+  </div>
+
+  <div class="flex bg-gray rounded-sm w-full h-screen shadow-md">
+    <div class="md:flex justify-center items-center  w-1/2 bg-background hidden">
+      <div class="flex flex-col items-start md:space-y-7 lg:space-y-12 px-20">
+        <div>
+          <h1 class="md:text-[2.3rem] lg:text-[2.9rem] leading-[1.5]">
+            <span class="font-extralight inline-block">Unfiltered <span
+                class="from-primary to-accent bg-gradient-to-r bg-clip-text text-transparent tracking-[4px]">Voices</span></span>
+            <span class="italic inline-block tracking-[2px]">Unleashed Connections</span>
+            <span class="block font-extralight">Social Media Without</span>
+            <span
+              class="uppercase inline-block from-primary to-accent bg-gradient-to-r bg-clip-text font-bold text-transparent">Censorship</span>
+          </h1>
+
+        </div>
+
+        <div>
+          <p class="text-text text-start tracking-[1px] leading-[1.5] text-md">Revolutionize Your Social Experience <br>
+            Explore Unfiltered Conversations and Authentic Connections without Restrictions.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div
+      class="w-full md:w-1/2 flex flex-col justify-center space-y-5 px-4 md:px-0 md:py-3 bg-background bg-opacity-80 text-text">
+      <!-- Welcome text to authentification page -->
+      <div class="center flex-col text-2xl font-light pb-10 flex-wrap">
+        <h1 class="font-headings text-center">Create an account</h1>
+        <p class="text-sm text-text text-opacity-80 text-center px-4 italic">Welcome to LifeInvader please proceed with
+          the
+          sign up form</p>
+      </div>
+
+
+      <!-- Login form -->
+      <form class="flex flex-col space-y-5 items-center px-10 sm:px-40 md:px-20 lg:px-40" id="signup-form">
+        <div class="relative flex flex-col w-full ">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90">username</label>
+          <input type="text" name="" class="auth-input bg-gray" id="username-input-signup" />
+        </div>
+        <div class="relative flex flex-col w-full ">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90">email</label>
+          <input type="email" name="" class="auth-input bg-gray" id="email-input-signup" />
+        </div>
+        <div class="relative flex flex-col w-full">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90">repeat password</label>
+          <input type="password" name="" class="auth-input bg-gray" id="repassword-input-signup" />
+        </div>
+        <div class="relative flex flex-col w-full">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90">password</label>
+          <input type="password" name="" class="auth-input bg-gray" id="password-input-signup" />
+        </div>
+        <button
+          class="px-4 py-3 w-full rounded-md font-bold bg-accent hover:bg-secondary text-text hover:border-transparent hover:font-bold transition-colors duration-300"
+          id="signup-button">
+          Sign Up
+        </button>
+      </form>
+
+      <form class="flex-col space-y-5 items-center px-10 sm:px-40 md:px-20 lg:px-40 hidden" id="login-form">
+        <div class="relative flex flex-col w-full ">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90 ">username or email</label>
+          <input type="text" name="" class="auth-input bg-gray" id="emailuser-input-login" />
+        </div>
+        <div class="relative flex flex-col w-full">
+          <label class="absolute px-4 py-2 text-xs uppercase text-text text-opacity-90">password</label>
+          <input type="password" name="" class="auth-input bg-gray" id="password-input-login" />
+        </div>
+        <button
+          class="px-4 py-3 w-full rounded-md font-bold bg-accent hover:bg-secondary text-text hover:border-transparent hover:font-bold transition-colors duration-300"
+          id="login-button">
+          Log in
+        </button>
+      </form>
+
+      <!-- Info for bottom page -->
+      <div class="center text-sm font-light space-x-1 flex-wrap">
+        <p class="text-text text-opacity-60">Do you have an account?</p>
+        <a class=" text-accent" href="" id="switch-form">Log in here</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script src="./dist/packages/jquery.js"></script>
+<script src="./dist/packages/toastr/main.js"></script>
+<script src="./dist/components/auth/formswitch.js"></script>
+<script src="./dist/components/auth/signup.js"></script>
+<script src="./dist/components/auth/login.js"></script>
+
+
+</html>

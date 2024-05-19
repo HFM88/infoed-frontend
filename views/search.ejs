@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href='./dist/tw_output.css'>
+    <link rel="stylesheet" href="./dist/packages/toastr/main.css">
+</head>
+
+<body class="bg-background font-paragraphs">
+    <%-include ('components/navbar.ejs')%>
+        <div class="w-full h-screen flex flex-col mt-24 items-center">
+            <div class="md:w-8/12 xl:w-1/2 h-auto p-5 rounded-lg bg-gray flex flex-col">
+                <!-- First section (search bar container) -->
+                <section class="w-full h-6 flex items-center">
+                    <!-- Icon -->
+                    <span class="w-10 h-full flex items-center justify-center text-text text-opacity-40">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-7 h-7">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+                    </span>
+                    <!-- Input -->
+                    <input type="text"
+                        class="w-full h-full font-medium md:pl-2 focus:outline-none bg-transparent text-text placeholder-text placeholder-opacity-40 searchInput"
+                        placeholder="Search what you want ...">
+                </section>
+                <!-- Second section (results container) -->
+                <section class="w-full h-auto hidden flex-col gap-y-3 mt-8 resultsContainer px-2"></section>
+            </div>
+        </div>
+
+        <!-- Load the feed under the search bar else load the results -->
+
+</body>
+
+
+
+<script src="./dist/packages/jquery.js"></script>
+<script src="./dist/packages/toastr/main.js"></script>
+<script type="module" src="../dist/components/search/search.js"></script>
+
+
+</html>

@@ -1,0 +1,5 @@
+{
+  ".auth-input": {
+    "@apply w-full px-4 py-3 pt-6 outline-none ring-1 ring-transparent focus:ring-primary rounded-md": {}
+  }
+}

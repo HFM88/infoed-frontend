@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='./dist/tw_output.css'>
+</head>
+
+<body class="bg-background font-paragraphs">
+    <div class="flex h-screen w-screen">
+        <div class="flex flex-col w-full h-full basiis-1 md:basis-1/4 border-r border-r-text border-opacity-20">
+            <div class="flex basis-1/12 items-end justify-between px-4 py-2">
+                <a href="/home"><%-include('./components/logo.ejs') %></a>
+            </div>
+            <div
+                class="flex flex-col space-y-4 basis-11/12 h-screen mt-10 overflow-y-scroll overflow-x-hidden scrollbar-none">
+                <div class="flex text-lg text-white px-4 font-headings">
+                    Messsages
+                </div>
+                <div id="friends-container" class="flex flex-col space-y-2">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:flex w-full basis-1 md:basis-3/4">
+            <div class="flex flex-col w-full">
+                <div
+                    class="flex items-center basis-1/12 w-full justify-between px-4 py-4 border-b-text border-b border-opacity-20">
+                    <div class="flex space-x-3 items-center">
+                        <div class="w-12 h-12 overflow-hidden">
+                            <img src="https://wallpapers.com/images/hd/cool-profile-picture-minion-13pu7815v42uvrsg.jpg"
+                                alt="" class="h-full w-full rounded-full object-cover shadow-md"
+                                id="user-profile-pic" />
+                        </div>
+                        <p class="text-text font-headings" id="friend-displayname">Username</p>
+                    </div>
+                    <a
+                        class="text-text py-1.5 px-4 bg-accent rounded-md hover:bg-secondary duration-300 transition-all" id="profile-button">
+                        View profile
+                    </a>
+                </div>
+                <div id="message-container"
+                    class="flex flex-col-reverse space-y-2 basis-11/12 w-full overflow-x-hidden overflow-y-scroll text-text px-4 scrollbar-none">
+                   
+                </div>
+                <div class="flex items-center basis-1/12 w-full justify-between px-4 py-4">
+                    <div class="relative w-full">
+                        <input id="message-input" type="text"
+                            class="w-full py-4 outline-none px-4 pr-12 rounded-md bg-gray-200 text-text placeholder-text placeholder-opacity-40 bg-gray"
+                            placeholder="Send a message">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" id="send-button"
+                            stroke="currentColor"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-white text-opacity-40 cursor-pointer transition-all duration-300 hover:text-opacity-100">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./dist/components/messages/entry.js"></script>
+<script src="./dist/components/messages/renderFriends.js"></script>
+<script src="./dist/components/messages/renderMessages.js"></script>
+
+
+
+</html>

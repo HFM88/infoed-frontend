@@ -1,0 +1,9 @@
+{
+    ".hover-anim" : {
+        "@apply  transition-all duration-200 group-hover:font-bold hover:font-bold" : {}
+    },
+    ".button-anim" : {
+        "@apply hover:bg-primary hover:text-background hover:border-transparent hover:font-bold transition-colors duration-300" : {}
+    }
+    
+}

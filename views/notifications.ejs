@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='./dist/tw_output.css'>
+    <link rel="stylesheet" href="./dist/packages/toastr/main.css">
+</head>
+
+<body class="bg-background font-paragraphs">
+    <%-include ('components/navbar.ejs')%>
+
+        <div class="flex justify-center w-full mt-20 text-text font-headings text-md">
+            <div class="flex basis-full md:basis-2/3 lg:basis-1/2">
+                <div class="basis-full flex flex-col justify-center space-y-5">
+                    <span class="text-center">My Friends</span>
+                    <span class="w-full h-[0.5px] bg-text bg-opacity-40"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex justify-center w-full mt-10 mb-24 text-text">
+            <div class="flex flex-col basis-full md:basis-2/3 lg:basis-1/2 justify-center space-y-4"
+                id="friends-container">
+                <!-- notificare -->
+
+            </div>
+        </div>
+
+        <div class="flex justify-center w-full text-text font-headings text-md">
+            <div class="flex basis-full md:basis-2/3 lg:basis-1/2">
+                <div class="basis-full flex flex-col justify-center space-y-5">
+                    <span class="text-center">Friend Requests</span>
+                    <span class="w-full h-[0.5px] bg-text bg-opacity-40"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex justify-center w-full mt-10 mb-24 text-text">
+            <div class="flex flex-col basis-full md:basis-2/3 lg:basis-1/2 justify-center space-y-4"
+                id="notifications-container">
+                <!-- notificare -->
+
+            </div>
+        </div>
+
+
+
+        <script src="./dist/packages/jquery.js"></script>
+        <script src="./dist/packages/toastr/main.js"></script>
+        <script src="./dist/components/notifications/renderNotif.js"></script>
+        <script src="./dist/components/notifications/renderFriends.js"></script>
+
+
+</body>
+
+
+</html>

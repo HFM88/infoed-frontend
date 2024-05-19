@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href='./dist/tw_output.css'>
+    <link rel="stylesheet" href="./dist/packages/toastr/main.cs">
+</head>
+
+<body class="bg-background font-paragraphs">
+    <%-include ('components/navbar.ejs')%>
+        <div class="flex justify-center w-full mt-24 mb-24 text-text">
+            <div class="flex flex-col basis-full md:basis-3/4 justify-center space-y-2 px-10">
+                <div class="w-full flex justify-between py-2">
+                    <div class="flex flex-col">
+                        <p class="text-2xl font-headings" id="user-display-name">Username</p>
+                        <p class="text-lg text-text text-opacity-60" id="user-name">@username</p>
+                    </div>
+
+                    <div class="hidden xs:block relative h-20 w-20">
+                        <img src="https://wallpapers.com/images/hd/cool-profile-picture-minion-13pu7815v42uvrsg.jpg"
+                            alt="" class="h-full w-full rounded-full object-cover shadow-md" id="user-profile-pic" />
+                        <a
+                            class="absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 hover:opacity-100" id="edit-profile-pic">
+                            <div
+                                class="rounded-full text-white bg-black bg-opacity-70 w-full h-full flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="h-8 w-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="flex justify-between items-center text-text text-sm">
+                    <p id="user-bio">Cat lover with a soft spot for chubby felines.</p>
+                </div>
+
+                <div class="flex justify-between items-center text-text text-sm">
+                    <div class="flex items-center space-x-12 mt-2">
+                        <div class="flex items-center space-x-2">
+                            <div class="absolute">
+                                <a class="flex relative" href="" id="friends">
+                                    <div class="w-8 h-8 overflow-hidden rounded-full">
+                                        <img src="https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg"
+                                            alt="" class="object-cover w-full h-full">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="absolute">
+                                <a class="flex relative" href="" id="friends">
+                                    <div class="w-8 h-8 overflow-hidden rounded-full">
+                                        <img src="https://cdn.discordapp.com/attachments/1132682274018693283/1240835024597680209/image.png?ex=6648012b&is=6646afab&hm=fd28e8f1a24141718c19657fa70fa3261be0bc6511a6cb5ba81b773a8ad94301&"
+                                            alt="" class="object-cover w-full h-full">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-text text-opacity-40" id="user-friends">20 friends</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <a id="pf-btn-secondary" href=""
+                        class="w-1/2 px-2 py-2 bg-gray hover:bg-lightgray transition-colors duration-300 rounded-md mt-4 text-center" >
+                        Settings
+                    </a>
+                    <a id="pf-btn-primary" href=""
+                        class="w-1/2 px-2 py-2 bg-accent hover:bg-secondary transition-colors duration-300 rounded-md mt-4 text-center">
+                        Edit Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center w-full mt-24 mb-24 text-text">
+            <div class="w-full sm:w-3/4 px-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="posts-container">
+                    
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="../dist//packages/jquery.js"></script>
+<script src="../dist/packages/toastr/main.js"></script>
+<script src="../dist/components/imageOnScreen.js"></script>
+<script src="./dist/components/profile/main.js"></script>
+<script src="../dist/components/profile/renderProfile.js"></script>
+
+</html>
